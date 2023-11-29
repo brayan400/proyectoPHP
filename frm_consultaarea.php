@@ -9,7 +9,7 @@
 
 <body>
     <form name="formulario1" method="post" action="rta_area.php">
-        codigo de area <input type="text" name="IDarea">
+        codigo de area<br><br><input type="text" name="IDarea"><br><br>
         <input type="submit" value="Consultar">
         <input type="reset" value="Limpiar">
     </form>

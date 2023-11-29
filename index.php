@@ -23,14 +23,14 @@
         </ul>
         <ul>
             <li><a href="frm_consultaarea.php">Buscar area</a></li>
-            <li><a href="#">Buscar cargo</a></li>
-            <li><a href="#">Buscar Profesion</a></li>
+            <li><a href="frm_consultacargo.php">Buscar cargo</a></li>
+            <li><a href="frm_consultaprofesion.php">Buscar Profesion</a></li>
             <li><a href="frm_consultaempleado.php">Buscar Empleado</a></li>
         </ul>
         <ul>
-            <li><a href="#">administrar area</a></li>
+            <li><a href="administrararea.php">administrar area</a></li>
             <li><a href="administrarcargo.php">administrar cargo</a></li>
-            <li><a href="#">administrar profesion</a></li>
+            <li><a href="administrarprofesion.php">administrar profesion</a></li>
             <li><a href="administrarempleado.php">administrar empleado</a></li>
         </ul>
     </nav>
@@ -38,7 +38,7 @@
         <h2 id="subtitulo"> Bienvenido </h2>
     </main>
     <footer>
-        <h6 id="pie"> Derechos reservados Alexander </h6>
+        <h6 id="pie"> Derechos reservados Stiven Rodriguez </h6>
     </footer>
 
 </body>

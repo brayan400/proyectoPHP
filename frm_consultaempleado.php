@@ -9,7 +9,7 @@
 
 <body>
     <form name="formulario1" method="post" action="rta_empleado.php">
-        cedula <input type="text" name="cedula">
+        cedula<br><br><input type="text" name="cedula"><br><br>
         <input type="submit" value="Consultar">
         <input type="reset" value="Limpiar">
     </form>
