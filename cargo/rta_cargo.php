@@ -1,5 +1,5 @@
 <?php
-require_once('conex.php');
+require_once('../conex.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,40 +13,38 @@ require_once('conex.php');
 <body>
     <table border="1">
         <tr>
-            <td colspan="2">datos del area</td>
+            <td colspan="2">datos del cargo</td>
         </tr>
         <?php
-        $myidarea = $_POST['IDarea'];
+        $myidcargo = $_POST['IDcargo'];
 
-        $query = "select idarea,nombrearea from area where (idarea=$myidarea)";
-
+        $query = "select idcargo,nombrecargo from cargo where (idcargo=$myidcargo)";
 
         if ($stmt = $con->prepare($query)) {
             $stmt->execute();
-            $stmt->bind_result($idarea, $nombrearea);
-
+            $stmt->bind_result($idcargo, $nombrecargo);
             while ($stmt->fetch()) {
         ?>
                 <tr>
-                    <td>Codigo Area</td>
-                    <td><?php printf("%s", $idarea); ?></td>
+                    <td>Codigo Cargo</td>
+                    <td><?php printf("%s", $idcargo); ?></td>
                 </tr>
                 <tr>
-                    <td>Nombre Area</td>
-                    <td><?php printf("%s", $nombrearea); ?></td>
+                    <td>Nombre Cargo</td>
+                    <td><?php printf("%s", $nombrecargo); ?></td>
                 </tr>
         <?php
             }
             $stmt->close();
         }
-
         ?>
         <tr>
             <td colspan="2">
-                <a href="frm_consultaarea.php">volver</a>
+                <a href="frm_consultacargo.php">volver</a>
             </td>
         </tr>
     </table>
+
 </body>
 
 </html>

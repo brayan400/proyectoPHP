@@ -1,5 +1,5 @@
 <?php
-require_once('conex.php');
+require_once('../conex.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,25 +7,27 @@ require_once('conex.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cargo</title>
 </head>
 
 <body>
+
     <table border="1">
         <tr>
-            <td colspan="2">PROFESIONES</td>
+            <td colspan="2"> CARGOS </td>
             <td colspan="2">
-                <a href="ingresoprofesion.php">IMNGRESO PROFESIONES</a>
+                <a href="ingresocargo.php">Ingreso cargo</a>
             </td>
         </tr>
         <tr>
-            <td>codigo</td>
-            <td>nombre</td>
-            <td>editar</td>
-            <td>eliminar</td>
+            <td>Codigo</td>
+            <td>Nombre</td>
+            <td>Editar</td>
+            <td>Eliminar</td>
         </tr>
         <?php
-        $query = "select*from profesion";
+        $query = "select *from cargo";
+
 
         if ($stmt = $con->prepare($query)) {
             $stmt->execute();
@@ -35,8 +37,9 @@ require_once('conex.php');
                 <tr>
                     <td><?php echo ($field1); ?></td>
                     <td><?php echo ($field2); ?></td>
-                    <td><a href="editarprofesion.php?id=<?php echo ($field1) ?>"><img src="./img/lapiz.png"></a></td>
-                    <td><a href="borrarprofesion.php?id=<?php echo ($field1) ?>"><img src="./img/papelera-de-reciclaje.png"></a></td>
+                    <td><a href="editarcargo.php?id=<?php echo ($field1) ?>"><img src="../img/lapiz.png"></a></td>
+
+                    <td><a href="borrarcargo.php?id=<?php echo ($field1) ?>"><img src="../img/papelera-de-reciclaje.png"></a></td>
                 </tr>
         <?php
             }
@@ -45,10 +48,9 @@ require_once('conex.php');
         ?>
         <tr>
             <td colspan="4">
-                <a href="index.php">volver</a>
+                <a href="../index.php"> Volver </a>
             </td>
         </tr>
-    </table>
 </body>
 
 </html>

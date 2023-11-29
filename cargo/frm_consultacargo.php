@@ -14,7 +14,7 @@
         <input type="reset" value="limpiar">
     </form>
     <tr>
-        <td><a href="index.php">Volver</a></td>
+        <td><a href="../index.php">Volver</a></td>
     </tr>
 </body>
 

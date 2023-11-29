@@ -1,5 +1,5 @@
 <?php
-require_once('conex.php');
+require_once('../conex.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,25 +13,23 @@ require_once('conex.php');
 <body>
     <table border="1">
         <tr>
-            <td colspan="2">datos del cargo</td>
+            <td colspan="2">Datos de Profeson</td>
         </tr>
         <?php
-        $myidcargo = $_POST['IDcargo'];
-
-        $query = "select idcargo,nombrecargo from cargo where (idcargo=$myidcargo)";
-
+        $myidprofesion = $_POST['IDprofesion'];
+        $query = "select idprofesion, nombreprofesion from profesion where (idprofesion=$myidprofesion)";
         if ($stmt = $con->prepare($query)) {
             $stmt->execute();
-            $stmt->bind_result($idcargo, $nombrecargo);
+            $stmt->bind_result($idprofesion, $nombreprofesion);
             while ($stmt->fetch()) {
         ?>
                 <tr>
-                    <td>Codigo Cargo</td>
-                    <td><?php printf("%s", $idcargo); ?></td>
+                    <td>Codigo Profesion</td>
+                    <td><?php printf("%s", $idprofesion); ?></td>
                 </tr>
                 <tr>
-                    <td>Nombre Cargo</td>
-                    <td><?php printf("%s", $nombrecargo); ?></td>
+                    <td>Nombre Profesion</td>
+                    <td><?php printf("%s", $nombreprofesion); ?></td>
                 </tr>
         <?php
             }
@@ -40,11 +38,10 @@ require_once('conex.php');
         ?>
         <tr>
             <td colspan="2">
-                <a href="frm_consultacargo.php">volver</a>
+                <a href="frm_consultaprofesion.php">volver</a>
             </td>
         </tr>
     </table>
-
 </body>
 
 </html>

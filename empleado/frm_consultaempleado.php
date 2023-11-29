@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Consulta empleado</title>
 </head>
 
 <body>
-    <form name="formulario1" method="post" action="rta_area.php">
-        codigo de area<br><br><input type="text" name="IDarea"><br><br>
+    <form name="formulario1" method="post" action="rta_empleado.php">
+        cedula<br><br><input type="text" name="cedula"><br><br>
         <input type="submit" value="Consultar">
         <input type="reset" value="Limpiar">
     </form>
     <tr>
-        <td><a href="index.php"> Volver </a></td>
+        <td><a href="../index.php"> Volver </a></td>
     </tr>
 </body>
 

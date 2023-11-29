@@ -1,5 +1,5 @@
 <?php
-require_once('conex.php');
+require_once('../conex.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,32 +13,37 @@ require_once('conex.php');
 <body>
     <table border="1">
         <tr>
-            <td colspan="2">Datos de Profeson</td>
+            <td colspan="2">datos del area</td>
         </tr>
         <?php
-        $myidprofesion = $_POST['IDprofesion'];
-        $query = "select idprofesion, nombreprofesion from profesion where (idprofesion=$myidprofesion)";
+        $myidarea = $_POST['IDarea'];
+
+        $query = "select idarea,nombrearea from area where (idarea=$myidarea)";
+
+
         if ($stmt = $con->prepare($query)) {
             $stmt->execute();
-            $stmt->bind_result($idprofesion, $nombreprofesion);
+            $stmt->bind_result($idarea, $nombrearea);
+
             while ($stmt->fetch()) {
         ?>
                 <tr>
-                    <td>Codigo Profesion</td>
-                    <td><?php printf("%s", $idprofesion); ?></td>
+                    <td>Codigo Area</td>
+                    <td><?php printf("%s", $idarea); ?></td>
                 </tr>
                 <tr>
-                    <td>Nombre Profesion</td>
-                    <td><?php printf("%s", $nombreprofesion); ?></td>
+                    <td>Nombre Area</td>
+                    <td><?php printf("%s", $nombrearea); ?></td>
                 </tr>
         <?php
             }
             $stmt->close();
         }
+
         ?>
         <tr>
             <td colspan="2">
-                <a href="frm_consultaprofesion.php">volver</a>
+                <a href="frm_consultaarea.php">volver</a>
             </td>
         </tr>
     </table>

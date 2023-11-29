@@ -16,22 +16,22 @@
     </header>
     <nav class="nav">
         <ul>
-            <li><a href="consultaarea.php">Area </a></li>
-            <li><a href="consutacargo.php">Cargo </a></li>
-            <li><a href="consultaprofesiones.php">Profesión </a></li>
-            <li><a href="consultaempleado.php">Empleado </a></li>
+            <li><a href="./area/consultaarea.php">Area </a></li>
+            <li><a href="./cargo/consutacargo.php">Cargo </a></li>
+            <li><a href="./profesion/consultaprofesiones.php">Profesión </a></li>
+            <li><a href="./empleado/consultaempleado.php">Empleado </a></li>
         </ul>
         <ul>
-            <li><a href="frm_consultaarea.php">Buscar area</a></li>
-            <li><a href="frm_consultacargo.php">Buscar cargo</a></li>
-            <li><a href="frm_consultaprofesion.php">Buscar Profesion</a></li>
-            <li><a href="frm_consultaempleado.php">Buscar Empleado</a></li>
+            <li><a href="./area/frm_consultaarea.php">Buscar area</a></li>
+            <li><a href="./cargo/frm_consultacargo.php">Buscar cargo</a></li>
+            <li><a href="./profesion/frm_consultaprofesion.php">Buscar Profesion</a></li>
+            <li><a href="./empleado/frm_consultaempleado.php">Buscar Empleado</a></li>
         </ul>
         <ul>
-            <li><a href="administrararea.php">administrar area</a></li>
-            <li><a href="administrarcargo.php">administrar cargo</a></li>
-            <li><a href="administrarprofesion.php">administrar profesion</a></li>
-            <li><a href="administrarempleado.php">administrar empleado</a></li>
+            <li><a href="./area/administrararea.php">administrar area</a></li>
+            <li><a href="./cargo/administrarcargo.php">administrar cargo</a></li>
+            <li><a href="./profesion/administrarprofesion.php">administrar profesion</a></li>
+            <li><a href="./empleado/administrarempleado.php">administrar empleado</a></li>
         </ul>
     </nav>
     <main>

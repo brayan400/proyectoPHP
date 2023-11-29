@@ -1,17 +1,17 @@
 <?php
-require_once('conex.php');
+require_once('../conex.php');
 ?>
 <?php
 if (isset($_POST['submit'])) {
-    $nombreprofesion = strtoupper($_POST['nombreP']);
+    $nombreprofesion = strtoupper($_POST['nombreA']);
 
-    $consultaprofesion = "SELECT*FROM profesion";
+    $consultaprofesion = "SELECT*FROM area";
     $rta_profesion = mysqli_query($con, $consultaprofesion);
     $valor = mysqli_num_rows($rta_profesion);
     $valor++;
-    $ingreso = "INSERT INTO profesion VALUES ($valor, '$nombreprofesion')";
+    $ingreso = "INSERT INTO area VALUES ($valor,'$nombreprofesion')";
     $rta_ingreso = mysqli_query($con, $ingreso);
-    header("location:administrarprofesion.php");
+    header("location:administrararea.php");
 }
 ?>
 <!DOCTYPE html>
@@ -19,19 +19,17 @@ if (isset($_POST['submit'])) {
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 
 <body>
     <form name="ingreso" method="post" action="">
-        Nombre profesion
-        <input type="text" name="nombreP">
+        NOMBRE DE AREA
+        <input type="text" name="nombreA">
         <input type="submit" value="ingresar" name="submit">
     </form>
-    <a href="administrarprofesion.php">Regresar</a>
-
+    <a href="administrararea.php">Regresar</a>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 <?php
-require_once('conex.php');
+require_once('../conex.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,8 +35,8 @@ require_once('conex.php');
                 <tr>
                     <td><?php echo ($field1); ?></td>
                     <td><?php echo ($field2); ?></td>
-                    <td><a href="editararea.php?id=<?php echo ($field1) ?>"><img src="./img/lapiz.png"></a></td>
-                    <td><a href="borrararea.php?id=<?php echo ($field1) ?>"><img src="./img/papelera-de-reciclaje.png"></a></td>
+                    <td><a href="editararea.php?id=<?php echo ($field1) ?>"><img src="../img/lapiz.png"></a></td>
+                    <td><a href="borrararea.php?id=<?php echo ($field1) ?>"><img src="../img/papelera-de-reciclaje.png"></a></td>
                 </tr>
         <?php
             }
@@ -45,7 +45,7 @@ require_once('conex.php');
         ?>
         <tr>
             <td colspan="4">
-                <a href="index.php">volver</a>
+                <a href="../index.php">volver</a>
             </td>
         </tr>
 </body>

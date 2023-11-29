@@ -1,5 +1,5 @@
 <?php
-require_once('conex.php');
+require_once('../conex.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,13 +41,13 @@ require_once('conex.php');
                     <td><?php echo ($field1) ?></td>
                     <td><?php echo ($field2) ?></td>
                     <td><?php echo ($field3) ?></td>
-                    <td><img src="./img/<?php echo ($field4); ?>"></td>
+                    <td><img src="../img/<?php echo ($field4); ?>"></td>
                     <td><?php echo ($field5) ?></td>
                     <td><?php echo ($field6) ?></td>
                     <td><?php echo ($field7) ?></td>
-                    <td><a href="editarempleado.php?id=<?php echo ($field1) ?>"><img src="./img/lapiz.png"></a></td>
+                    <td><a href="editarempleado.php?id=<?php echo ($field1) ?>"><img src="../img/lapiz.png"></a></td>
 
-                    <td><a href="borrarempleado.php?id=<?php echo ($field1) ?>"><img src="./img/papelera-de-reciclaje.png"></a></td>
+                    <td><a href="borrarempleado.php?id=<?php echo ($field1) ?>"><img src="../img/papelera-de-reciclaje.png"></a></td>
                 </tr>
         <?php
             }
@@ -55,7 +55,7 @@ require_once('conex.php');
         }
         ?>
         <tr>
-            <td colspan="9"><a href="index.php"> Volver </a></td>
+            <td colspan="9"><a href="../index.php"> Volver </a></td>
         </tr>
 </body>
 
