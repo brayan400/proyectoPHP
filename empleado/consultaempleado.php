@@ -7,15 +7,16 @@ require_once('../conex.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styleconsulta.css">
     <title>Document</title>
 </head>
 
 <body>
-    <table border="1">
+    <table id="titulo">
         <tr>
             <td colspan="7"> Empleados Registrados</td>
         </tr>
-        <tr>
+        <tr id="subtitulo">
             <td>Codigo</td>
             <td>Nombre</td>
             <td>Apellido</td>
@@ -31,7 +32,7 @@ require_once('../conex.php');
             $stmt->bind_result($field1, $field2, $field3, $field4, $field5, $field6, $field7);
             while ($stmt->fetch()) {
         ?>
-                <tr>
+                <tr id="info">
                     <td><?php echo ($field1) ?></td>
                     <td><?php echo ($field2) ?></td>
                     <td><?php echo ($field3) ?></td>
@@ -45,7 +46,7 @@ require_once('../conex.php');
             $stmt->close();
         }
         ?>
-        <tr>
+        <tr id="regresar">
             <td colspan="7"><a href="../index.php"> Volver </a></td>
         </tr>
     </table>

@@ -37,6 +37,7 @@ if (isset($_POST['submit'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylebuscar.css">
     <title>Document</title>
 </head>
 
@@ -46,11 +47,11 @@ if (isset($_POST['submit'])) {
         <?php
         $datos = mysqli_fetch_assoc($rta_consulta_por_empleado);
         ?>
-        <input type="number" value="<?php echo ($datos['cedula']) ?>" name="Cedula" /><br><br>
-        <input type="text" value="<?php echo ($datos['nombre']) ?>" name="Nombre" /><br><br>
-        <input type="text" value="<?php echo ($datos['apellido']) ?>" name="Apellido" /><br><br>
-        <input type="text" value="<?php echo ($datos['foto']) ?>" name="Foto" /><br><br>
-        <select value="<?php echo ($datos['codigocargo']) ?>" name="Codigocargo">
+        <input id="text" type="number" value="<?php echo ($datos['cedula']) ?>" name="Cedula" /><br><br>
+        <input id="text" type="text" value="<?php echo ($datos['nombre']) ?>" name="Nombre" /><br><br>
+        <input id="text" type="text" value="<?php echo ($datos['apellido']) ?>" name="Apellido" /><br><br>
+        <input id="text" type="text" value="<?php echo ($datos['foto']) ?>" name="Foto" /><br><br>
+        <select id="text" value="<?php echo ($datos['codigocargo']) ?>" name="Codigocargo">
             <?php
             $getcargos = "SELECT*FROM cargo";
             $getresultado = mysqli_query($con, $getcargos);
@@ -59,12 +60,12 @@ if (isset($_POST['submit'])) {
                 $idC = $valoresC['idcargo'];
                 $nombreC = $valoresC['nombrecargo'];
             ?>
-                <option value="<?php echo $idC; ?>"><?php echo $nombreC; ?></option>
+                <option value="<?php echo $idC; ?>"><?php echo $idC . " " . $nombreC; ?></option>
             <?php
             }
             ?>
         </select><br><br>
-        <select value="<?php echo ($datos['codigoprofesion']) ?>" name="Codigoprofesion">
+        <select id="text" value="<?php echo ($datos['codigoprofesion']) ?>" name="Codigoprofesion">
             <?php
             $getprofesiones = "SELECT*FROM profesion";
             $getprofesiones1 = mysqli_query($con, $getprofesiones);
@@ -78,7 +79,7 @@ if (isset($_POST['submit'])) {
             }
             ?>
         </select><br><br>
-        <select value="<?php echo ($datos['codigoarea']) ?>" name="Codigoarea">
+        <select id="text" value="<?php echo ($datos['codigoarea']) ?>" name="Codigoarea">
             <?php
             $getareas = "SELECT*FROM area";
             $getareas1 = mysqli_query($con, $getareas);
@@ -90,9 +91,10 @@ if (isset($_POST['submit'])) {
             <?php
             }
             ?>
-            <input type="submit" value="editar" name="submit">
+        </select><br><br>
+        <input id="submit" type="submit" value="editar" name="submit">
+        <a id="submit" href="administrarempleado.php">Regresar</a>
     </form>
-    <a href="administrarempleado.php">Regresar</a>
 </body>
 
 </html>

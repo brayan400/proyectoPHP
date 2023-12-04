@@ -22,6 +22,7 @@ if (isset($_POST['submit'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylebuscar.css">
     <title>Document</title>
 </head>
 
@@ -30,8 +31,8 @@ if (isset($_POST['submit'])) {
         <?php
         $datos = mysqli_fetch_assoc($rta_consulta_por_area);
         ?>
-        <input type="text" value="<?php echo ($datos['nombrearea']) ?>" name="NombreArea">
-        <input type="submit" value="editar" name="submit">
+        <input id="text" type="text" value="<?php echo ($datos['nombrearea']) ?>" name="NombreArea"><br><br>
+        <input id="submit" type="submit" value="editar" name="submit">
     </form>
 </body>
 

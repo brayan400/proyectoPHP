@@ -7,12 +7,13 @@ require_once('../conex.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styleconsulta.css">
     <title>Document</title>
 </head>
 
 <body>
-    <table border="1">
-        <tr>
+    <table>
+        <tr id="titulo">
             <td colspan="2">Datos de Profeson</td>
         </tr>
         <?php
@@ -23,12 +24,12 @@ require_once('../conex.php');
             $stmt->bind_result($idprofesion, $nombreprofesion);
             while ($stmt->fetch()) {
         ?>
-                <tr>
-                    <td>Codigo Profesion</td>
+                <tr id="info">
+                    <td id="subtitulo">Codigo Profesion</td>
                     <td><?php printf("%s", $idprofesion); ?></td>
                 </tr>
-                <tr>
-                    <td>Nombre Profesion</td>
+                <tr id="info">
+                    <td id="subtitulo">Nombre Profesion</td>
                     <td><?php printf("%s", $nombreprofesion); ?></td>
                 </tr>
         <?php
@@ -36,7 +37,7 @@ require_once('../conex.php');
             $stmt->close();
         }
         ?>
-        <tr>
+        <tr id="regresar">
             <td colspan="2">
                 <a href="frm_consultaprofesion.php">volver</a>
             </td>

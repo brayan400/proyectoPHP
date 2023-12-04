@@ -4,18 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylebuscar.css">
     <title>Consulta empleado</title>
 </head>
 
 <body>
     <form name="formulario1" method="post" action="rta_empleado.php">
-        cedula<br><br><input type="text" name="cedula"><br><br>
-        <input type="submit" value="Consultar">
-        <input type="reset" value="Limpiar">
+        cedula<br><br><input id="text" type="text" name="cedula"><br><br>
+        <input id="submit" type="submit" value="Consultar">
+        <input id="reset" type="reset" value="Limpiar"><br><br>
+        <a href="../index.php"> Volver </a>
     </form>
-    <tr>
-        <td><a href="../index.php"> Volver </a></td>
-    </tr>
 </body>
 
 </html>

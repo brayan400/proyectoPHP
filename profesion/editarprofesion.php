@@ -21,6 +21,7 @@ if (isset($_POST['submit'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylebuscar.css">
     <title>Document</title>
 </head>
 
@@ -29,14 +30,10 @@ if (isset($_POST['submit'])) {
         <?php
         $dato = mysqli_fetch_assoc($rta_consulta_por_profesion);
         ?>
-        <input type="text" value="<?php echo ($dato['nombreprofesion']) ?>" name="NombreProfesoin">
-        <input type="submit" value="editar" name="submit">
+        <input id="text" type="text" value="<?php echo ($dato['nombreprofesion']) ?>" name="NombreProfesoin"><br><br>
+        <input id="submit" type="submit" value="editar" name="submit"><br><br>
+        <a href="administrarprofesion.php">regresar</a>
     </form>
-    <tr>
-        <td>
-            <a href="administrarprofesion.php">regresar</a>
-        </td>
-    </tr>
 </body>
 
 </html>

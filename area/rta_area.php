@@ -7,12 +7,13 @@ require_once('../conex.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styleconsulta.css">
     <title>Document</title>
 </head>
 
 <body>
-    <table border="1">
-        <tr>
+    <table>
+        <tr id="titulo">
             <td colspan="2">datos del area</td>
         </tr>
         <?php
@@ -27,12 +28,12 @@ require_once('../conex.php');
 
             while ($stmt->fetch()) {
         ?>
-                <tr>
-                    <td>Codigo Area</td>
+                <tr id="info">
+                    <td id="subtitulo">Codigo Area</td>
                     <td><?php printf("%s", $idarea); ?></td>
                 </tr>
-                <tr>
-                    <td>Nombre Area</td>
+                <tr id="info">
+                    <td id="subtitulo">Nombre Area</td>
                     <td><?php printf("%s", $nombrearea); ?></td>
                 </tr>
         <?php
@@ -41,7 +42,7 @@ require_once('../conex.php');
         }
 
         ?>
-        <tr>
+        <tr id="regresar">
             <td colspan="2">
                 <a href="frm_consultaarea.php">volver</a>
             </td>

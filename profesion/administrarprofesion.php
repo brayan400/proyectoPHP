@@ -7,18 +7,19 @@ require_once('../conex.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Document</title>
 </head>
 
 <body>
-    <table border="1">
-        <tr>
+    <table class="content-table">
+        <tr id="titulos">
             <td colspan="2">PROFESIONES</td>
             <td colspan="2">
-                <a href="ingresoprofesion.php">IMNGRESO PROFESIONES</a>
+                <a href="ingresoprofesion.php" style="text-decoration: none">IMNGRESO PROFESIONES</a>
             </td>
         </tr>
-        <tr>
+        <tr id="subtitulos">
             <td>codigo</td>
             <td>nombre</td>
             <td>editar</td>
@@ -32,7 +33,7 @@ require_once('../conex.php');
             $stmt->bind_result($field1, $field2);
             while ($stmt->fetch()) {
         ?>
-                <tr>
+                <tr id="informacion">
                     <td><?php echo ($field1); ?></td>
                     <td><?php echo ($field2); ?></td>
                     <td><a href="editarprofesion.php?id=<?php echo ($field1) ?>"><img src="../img/lapiz.png"></a></td>
@@ -43,10 +44,8 @@ require_once('../conex.php');
             $stmt->close();
         }
         ?>
-        <tr>
-            <td colspan="4">
-                <a href="../index.php">volver</a>
-            </td>
+        <tr id="regresar">
+            <td colspan="4"><a href="../index.php" style="text-decoration: none">volver</a></td>
         </tr>
     </table>
 </body>

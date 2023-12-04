@@ -26,6 +26,7 @@ if (isset($_POST['submit'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Registrar empleado</title>
 </head>
 
@@ -45,7 +46,7 @@ if (isset($_POST['submit'])) {
                 $id = $valoresC['idcargo'];
                 $nombre = $valoresC['nombrecargo'];
             ?>
-                <option value="<?php echo $id; ?>"><?php echo $nombre; ?></option>
+                <option value="<?php echo $id; ?>"><?php echo $id . " - " . $nombre; ?></option>
             <?php
             }
             ?>
@@ -59,7 +60,7 @@ if (isset($_POST['submit'])) {
                 $id = $valorP['idprofesion'];
                 $nombre = $valorP['nombreprofesion'];
             ?>
-                <option value="<?php echo $id; ?>"><?php echo $nombre; ?></option>
+                <option value="<?php echo $id; ?>"><?php echo $id . " - " . $nombre; ?></option>
             <?php
             }
             ?>
@@ -72,7 +73,7 @@ if (isset($_POST['submit'])) {
                 $id = $valorA['idarea'];
                 $nombre = $valorA['nombrearea'];
             ?>
-                <option value="<?php echo $id; ?>"><?php echo $nombre; ?></option>
+                <option value="<?php echo $id; ?>"><?php echo $id . " - " . $nombre; ?></option>
             <?php
             }
             ?>
